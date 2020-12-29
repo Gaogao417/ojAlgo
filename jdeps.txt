@@ -6,13 +6,13 @@ ojalgo-48.4.0-tests.jar -> ./target/ojalgo-48.4.0.jar
    org.ojalgo                                         -> java.lang.invoke                                   java.base
    org.ojalgo                                         -> java.math                                          java.base
    org.ojalgo                                         -> java.util                                          java.base
+   org.ojalgo                                         -> java.util.concurrent                               java.base
    org.ojalgo                                         -> java.util.function                                 java.base
    org.ojalgo                                         -> org.junit.jupiter.api                              not found
    org.ojalgo                                         -> org.ojalgo.array                                   ojalgo-48.4.0.jar
    org.ojalgo                                         -> org.ojalgo.array.operation                         ojalgo-48.4.0.jar
    org.ojalgo                                         -> org.ojalgo.function                                ojalgo-48.4.0.jar
    org.ojalgo                                         -> org.ojalgo.function.constant                       ojalgo-48.4.0.jar
-   org.ojalgo                                         -> org.ojalgo.matrix                                  ojalgo-48.4.0.jar
    org.ojalgo                                         -> org.ojalgo.matrix.decomposition                    ojalgo-48.4.0.jar
    org.ojalgo                                         -> org.ojalgo.matrix.store                            ojalgo-48.4.0.jar
    org.ojalgo                                         -> org.ojalgo.netio                                   ojalgo-48.4.0.jar
@@ -22,6 +22,9 @@ ojalgo-48.4.0-tests.jar -> ./target/ojalgo-48.4.0.jar
    org.ojalgo                                         -> org.ojalgo.structure                               ojalgo-48.4.0.jar
    org.ojalgo                                         -> org.ojalgo.type                                    ojalgo-48.4.0.jar
    org.ojalgo                                         -> org.ojalgo.type.context                            ojalgo-48.4.0.jar
+   org.ojalgo                                         -> org.openjdk.jmh.annotations                        not found
+   org.ojalgo                                         -> org.openjdk.jmh.runner                             not found
+   org.ojalgo                                         -> org.openjdk.jmh.runner.options                     not found
    org.ojalgo.ann                                     -> java.io                                            java.base
    org.ojalgo.ann                                     -> java.lang                                          java.base
    org.ojalgo.ann                                     -> java.lang.invoke                                   java.base
@@ -53,7 +56,18 @@ ojalgo-48.4.0-tests.jar -> ./target/ojalgo-48.4.0.jar
    org.ojalgo.array                                   -> org.ojalgo.random                                  ojalgo-48.4.0.jar
    org.ojalgo.array                                   -> org.ojalgo.structure                               ojalgo-48.4.0.jar
    org.ojalgo.array                                   -> org.ojalgo.type.context                            ojalgo-48.4.0.jar
+   org.ojalgo.array                                   -> org.openjdk.jmh.annotations                        not found
+   org.ojalgo.array                                   -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.array.jmh_generated                     -> java.lang                                          java.base
+   org.ojalgo.array.jmh_generated                     -> java.util.concurrent                               java.base
+   org.ojalgo.array.jmh_generated                     -> java.util.concurrent.atomic                        java.base
+   org.ojalgo.array.jmh_generated                     -> org.ojalgo.array                                   ojalgo-48.4.0-tests.jar
+   org.ojalgo.array.jmh_generated                     -> org.openjdk.jmh.infra                              not found
+   org.ojalgo.array.jmh_generated                     -> org.openjdk.jmh.results                            not found
+   org.ojalgo.array.jmh_generated                     -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.array.jmh_generated                     -> org.openjdk.jmh.util                               not found
    org.ojalgo.array.operation                         -> java.lang                                          java.base
+   org.ojalgo.array.operation                         -> java.util                                          java.base
    org.ojalgo.array.operation                         -> org.junit.jupiter.api                              not found
    org.ojalgo.array.operation                         -> org.ojalgo                                         ojalgo-48.4.0-tests.jar
    org.ojalgo.array.operation                         -> org.ojalgo.function                                ojalgo-48.4.0.jar
@@ -62,6 +76,18 @@ ojalgo-48.4.0-tests.jar -> ./target/ojalgo-48.4.0.jar
    org.ojalgo.array.operation                         -> org.ojalgo.random                                  ojalgo-48.4.0.jar
    org.ojalgo.array.operation                         -> org.ojalgo.scalar                                  ojalgo-48.4.0.jar
    org.ojalgo.array.operation                         -> org.ojalgo.structure                               ojalgo-48.4.0.jar
+   org.ojalgo.array.operation                         -> org.openjdk.jmh.annotations                        not found
+   org.ojalgo.array.operation                         -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.array.operation.jmh_generated           -> java.lang                                          java.base
+   org.ojalgo.array.operation.jmh_generated           -> java.lang.reflect                                  java.base
+   org.ojalgo.array.operation.jmh_generated           -> java.util.concurrent                               java.base
+   org.ojalgo.array.operation.jmh_generated           -> java.util.concurrent.atomic                        java.base
+   org.ojalgo.array.operation.jmh_generated           -> org.ojalgo.array.operation                         ojalgo-48.4.0-tests.jar
+   org.ojalgo.array.operation.jmh_generated           -> org.ojalgo.matrix.store                            ojalgo-48.4.0.jar
+   org.ojalgo.array.operation.jmh_generated           -> org.openjdk.jmh.infra                              not found
+   org.ojalgo.array.operation.jmh_generated           -> org.openjdk.jmh.results                            not found
+   org.ojalgo.array.operation.jmh_generated           -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.array.operation.jmh_generated           -> org.openjdk.jmh.util                               not found
    org.ojalgo.function.aggregator                     -> java.lang                                          java.base
    org.ojalgo.function.aggregator                     -> java.math                                          java.base
    org.ojalgo.function.aggregator                     -> org.junit.jupiter.api                              not found
@@ -104,6 +130,18 @@ ojalgo-48.4.0-tests.jar -> ./target/ojalgo-48.4.0.jar
    org.ojalgo.function.special                        -> org.ojalgo.scalar                                  ojalgo-48.4.0.jar
    org.ojalgo.function.special                        -> org.ojalgo.type                                    ojalgo-48.4.0.jar
    org.ojalgo.function.special                        -> org.ojalgo.type.context                            ojalgo-48.4.0.jar
+   org.ojalgo.function.special                        -> org.openjdk.jmh.annotations                        not found
+   org.ojalgo.function.special                        -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.function.special                        -> org.openjdk.jmh.runner.options                     not found
+   org.ojalgo.function.special.jmh_generated          -> java.lang                                          java.base
+   org.ojalgo.function.special.jmh_generated          -> java.lang.reflect                                  java.base
+   org.ojalgo.function.special.jmh_generated          -> java.util.concurrent                               java.base
+   org.ojalgo.function.special.jmh_generated          -> java.util.concurrent.atomic                        java.base
+   org.ojalgo.function.special.jmh_generated          -> org.ojalgo.function.special                        ojalgo-48.4.0-tests.jar
+   org.ojalgo.function.special.jmh_generated          -> org.openjdk.jmh.infra                              not found
+   org.ojalgo.function.special.jmh_generated          -> org.openjdk.jmh.results                            not found
+   org.ojalgo.function.special.jmh_generated          -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.function.special.jmh_generated          -> org.openjdk.jmh.util                               not found
    org.ojalgo.machine                                 -> java.lang                                          java.base
    org.ojalgo.machine                                 -> org.junit.jupiter.api                              not found
    org.ojalgo.machine                                 -> org.ojalgo                                         ojalgo-48.4.0-tests.jar
@@ -115,16 +153,21 @@ ojalgo-48.4.0-tests.jar -> ./target/ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.junit.jupiter.api                              not found
    org.ojalgo.matrix                                  -> org.ojalgo                                         ojalgo-48.4.0-tests.jar
    org.ojalgo.matrix                                  -> org.ojalgo.array                                   ojalgo-48.4.0.jar
+   org.ojalgo.matrix                                  -> org.ojalgo.array.operation                         ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.ojalgo.function                                ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.ojalgo.function.aggregator                     ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.ojalgo.function.constant                       ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.ojalgo.matrix.decomposition                    ojalgo-48.4.0-tests.jar
    org.ojalgo.matrix                                  -> org.ojalgo.matrix.decomposition                    ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.ojalgo.matrix.store                            ojalgo-48.4.0.jar
+   org.ojalgo.matrix                                  -> org.ojalgo.netio                                   ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.ojalgo.random                                  ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.ojalgo.scalar                                  ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.ojalgo.structure                               ojalgo-48.4.0.jar
    org.ojalgo.matrix                                  -> org.ojalgo.type.context                            ojalgo-48.4.0.jar
+   org.ojalgo.matrix                                  -> org.openjdk.jmh.annotations                        not found
+   org.ojalgo.matrix                                  -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.matrix                                  -> org.openjdk.jmh.runner.options                     not found
    org.ojalgo.matrix.decomposition                    -> java.io                                            java.base
    org.ojalgo.matrix.decomposition                    -> java.lang                                          java.base
    org.ojalgo.matrix.decomposition                    -> java.math                                          java.base
@@ -138,8 +181,8 @@ ojalgo-48.4.0-tests.jar -> ./target/ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.function.aggregator                     ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.function.constant                       ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.function.special                        ojalgo-48.4.0.jar
-   org.ojalgo.matrix.decomposition                    -> org.ojalgo.matrix                                  ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.matrix                                  ojalgo-48.4.0-tests.jar
+   org.ojalgo.matrix.decomposition                    -> org.ojalgo.matrix                                  ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.matrix.store                            ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.matrix.task                             ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.matrix.transformation                   ojalgo-48.4.0.jar
@@ -148,11 +191,34 @@ ojalgo-48.4.0-tests.jar -> ./target/ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.scalar                                  ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.structure                               ojalgo-48.4.0.jar
    org.ojalgo.matrix.decomposition                    -> org.ojalgo.type.context                            ojalgo-48.4.0.jar
+   org.ojalgo.matrix.decomposition                    -> org.openjdk.jmh.annotations                        not found
+   org.ojalgo.matrix.decomposition                    -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.matrix.decomposition.jmh_generated      -> java.lang                                          java.base
+   org.ojalgo.matrix.decomposition.jmh_generated      -> java.lang.reflect                                  java.base
+   org.ojalgo.matrix.decomposition.jmh_generated      -> java.util.concurrent                               java.base
+   org.ojalgo.matrix.decomposition.jmh_generated      -> java.util.concurrent.atomic                        java.base
+   org.ojalgo.matrix.decomposition.jmh_generated      -> org.ojalgo.matrix.decomposition                    ojalgo-48.4.0-tests.jar
+   org.ojalgo.matrix.decomposition.jmh_generated      -> org.ojalgo.matrix.store                            ojalgo-48.4.0.jar
+   org.ojalgo.matrix.decomposition.jmh_generated      -> org.openjdk.jmh.infra                              not found
+   org.ojalgo.matrix.decomposition.jmh_generated      -> org.openjdk.jmh.results                            not found
+   org.ojalgo.matrix.decomposition.jmh_generated      -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.matrix.decomposition.jmh_generated      -> org.openjdk.jmh.util                               not found
+   org.ojalgo.matrix.jmh_generated                    -> java.lang                                          java.base
+   org.ojalgo.matrix.jmh_generated                    -> java.lang.reflect                                  java.base
+   org.ojalgo.matrix.jmh_generated                    -> java.util.concurrent                               java.base
+   org.ojalgo.matrix.jmh_generated                    -> java.util.concurrent.atomic                        java.base
+   org.ojalgo.matrix.jmh_generated                    -> org.ojalgo.matrix                                  ojalgo-48.4.0.jar
+   org.ojalgo.matrix.jmh_generated                    -> org.ojalgo.matrix                                  ojalgo-48.4.0-tests.jar
+   org.ojalgo.matrix.jmh_generated                    -> org.ojalgo.matrix.store                            ojalgo-48.4.0.jar
+   org.ojalgo.matrix.jmh_generated                    -> org.openjdk.jmh.infra                              not found
+   org.ojalgo.matrix.jmh_generated                    -> org.openjdk.jmh.results                            not found
+   org.ojalgo.matrix.jmh_generated                    -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.matrix.jmh_generated                    -> org.openjdk.jmh.util                               not found
    org.ojalgo.matrix.store                            -> java.lang                                          java.base
    org.ojalgo.matrix.store                            -> java.math                                          java.base
    org.ojalgo.matrix.store                            -> org.junit.jupiter.api                              not found
-   org.ojalgo.matrix.store                            -> org.ojalgo                                         ojalgo-48.4.0-tests.jar
    org.ojalgo.matrix.store                            -> org.ojalgo                                         ojalgo-48.4.0.jar
+   org.ojalgo.matrix.store                            -> org.ojalgo                                         ojalgo-48.4.0-tests.jar
    org.ojalgo.matrix.store                            -> org.ojalgo.function                                ojalgo-48.4.0.jar
    org.ojalgo.matrix.store                            -> org.ojalgo.function.aggregator                     ojalgo-48.4.0.jar
    org.ojalgo.matrix.store                            -> org.ojalgo.function.constant                       ojalgo-48.4.0.jar
@@ -303,6 +369,18 @@ ojalgo-48.4.0-tests.jar -> ./target/ojalgo-48.4.0.jar
    org.ojalgo.scalar                                  -> org.ojalgo.random                                  ojalgo-48.4.0.jar
    org.ojalgo.scalar                                  -> org.ojalgo.structure                               ojalgo-48.4.0.jar
    org.ojalgo.scalar                                  -> org.ojalgo.type.context                            ojalgo-48.4.0.jar
+   org.ojalgo.scalar                                  -> org.openjdk.jmh.annotations                        not found
+   org.ojalgo.scalar                                  -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.scalar                                  -> org.openjdk.jmh.runner.options                     not found
+   org.ojalgo.scalar.jmh_generated                    -> java.lang                                          java.base
+   org.ojalgo.scalar.jmh_generated                    -> java.util.concurrent                               java.base
+   org.ojalgo.scalar.jmh_generated                    -> java.util.concurrent.atomic                        java.base
+   org.ojalgo.scalar.jmh_generated                    -> org.ojalgo.scalar                                  ojalgo-48.4.0-tests.jar
+   org.ojalgo.scalar.jmh_generated                    -> org.ojalgo.scalar                                  ojalgo-48.4.0.jar
+   org.ojalgo.scalar.jmh_generated                    -> org.openjdk.jmh.infra                              not found
+   org.ojalgo.scalar.jmh_generated                    -> org.openjdk.jmh.results                            not found
+   org.ojalgo.scalar.jmh_generated                    -> org.openjdk.jmh.runner                             not found
+   org.ojalgo.scalar.jmh_generated                    -> org.openjdk.jmh.util                               not found
    org.ojalgo.structure                               -> java.lang                                          java.base
    org.ojalgo.structure                               -> org.junit.jupiter.api                              not found
    org.ojalgo.structure                               -> org.ojalgo                                         ojalgo-48.4.0-tests.jar
